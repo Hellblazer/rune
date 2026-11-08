@@ -288,6 +288,11 @@ unresolved 2026 failure report; Kit's HotReloadKit is simulator- and Mac-only fo
 
 Views stay plain Rust; there is no separate view language.
 
+The one exception is [`crates/rune-luau`](crates/rune-luau/README.md), which is **experimental**. It lets an app host
+sandboxed Luau scripts that build Rune UI, and only `examples/luau-panel` uses it. It is not part of the hot reload
+plan and does not replace Rust views. Core Rune doesn't depend on it, and its API may change or the crate may be
+removed.
+
 | Layer | What changes | How | Target (edit → presented frame) |
 |---|---|---|---|
 | 0. Tokens and knobs | colours, spacing, type, springs, any `Tunable` | token file watched; render thread re-resolves live, in-flight springs retarget | ≤ 50 ms Mac, ≤ 100 ms iPhone |

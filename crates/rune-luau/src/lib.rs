@@ -1,5 +1,8 @@
 //! Luau scripts that build Rune UI.
 //!
+//! **Experimental.** Rune views are plain Rust; this crate is an opt-in experiment that core Rune
+//! doesn't depend on. Its API may change, or the crate may be removed.
+//!
 //! A [`Script`] is one sandboxed Luau VM. Its `init.luau` returns a module whose `render(view)`
 //! builds nodes with `@rune/ui`:
 //!
